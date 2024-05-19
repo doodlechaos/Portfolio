@@ -1,0 +1,56 @@
+---
+const brands = [
+  { name: 'Brand 1', logo: '/assets/logos/hermes.png' },
+  { name: 'Brand 2', logo: '/assets/logos/disney.png' },
+  { name: 'Brand 3', logo: '/assets/logos/bmw.png' },
+  { name: 'Brand 4', logo: '/assets/logos/zedd.png' },
+  { name: 'Brand 5', logo: '/assets/logos/ted.png' },
+  { name: 'Brand 6', logo: '/assets/logos/vsq.png' },
+  { name: 'Brand 7', logo: '/assets/logos/thepianoguys.png' },
+  { name: 'Brand 8', logo: '/assets/logos/cleanbandit.png' },
+  //{ name: 'Brand 9', logo: '/assets/logos/grinderfilms.png' },
+  // Add more brands as needed 
+
+]
+
+    const numColumns = 4; // Specify the number of columns
+    const numRows = 2; // Specify the number of rows
+---
+
+<style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 10vh;
+    }
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(var(--num-columns), 1fr);
+      grid-template-rows: repeat(var(--num-rows), auto);
+      gap: 16px;
+      padding: 16px;
+    }
+    .brand-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .brand-item img {
+      max-width: 100%;
+      max-height: 100px;
+      object-fit: contain;
+      object-fit: contain;
+    border-radius: 8px; /* Added border-radius for rounded edges */
+    }
+  </style>
+  
+  <div class="container">
+    <div class="brand-grid" style={`--num-columns: ${numColumns}; --num-rows: ${numRows};`}>
+      {brands.map((brand) => (
+        <div class="brand-item">
+          <img src={brand.logo} alt={`${brand.name} logo`} />
+        </div>
+      ))}
+    </div>
+  </div>

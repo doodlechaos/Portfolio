@@ -6,16 +6,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import Icon from "../components/ui/Icon.astro";
 import Link from "../components/ui/link.astro";
+import BrandGrid from "../components/BrandGrid.astro";
 ---
 
 <BaseLayout>
-  <h1>test</h1>
   <div class="stack gap-20 lg:gap-48">
     <div class="wrapper stack gap-8 lg:gap-20">
       <header class="hero">
         <Hero
-          title="I build things for the {Web}"
-          tagline="Hi, 👋 I'm Stefan. I'm a web developer enthusiast and photographer."
+          title="Creative Coder"
+          tagline="Hi, 👋 I'm Mark. I bring music to life with reactive animations and simulations."
           align="start"
         >
           <div class="links">
@@ -33,14 +33,19 @@ import Link from "../components/ui/link.astro";
         <div class="avatar-wrapper">
           <div class="overlay"></div>
           <img
-            alt="Headshot of Stefan"
+            alt="Headshot of Mark"
             width="480"
             height="620"
             src="/assets/doodlechaos-logo.jpg"
           />
         </div>
       </header>
+        <BrandGrid />
+
+
+
     </div>
+
   </div>
 </BaseLayout>
 
