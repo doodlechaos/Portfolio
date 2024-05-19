@@ -12,7 +12,13 @@ import Skills from "../components/Skills.astro";
   description="Contact page of Mark Robbins's personal portfolio."
 >
   <div class="stack gap-20">
-    <header class="wrapper hero">
+    
+    <main class="wrapper stack gap-10">
+      <!-- <Skills /> -->
+      <ContactCTA />
+    </main>
+
+    <!-- <header class="wrapper hero">
       <div class="hero-content">
         <Hero
           align="center"
@@ -32,12 +38,8 @@ import Skills from "../components/Skills.astro";
         alt="illustration of a men coding web projects"
         src="/assets/illustrations/resume.svg"
       />
-    </header>
+    </header> -->
 
-    <main class="wrapper stack gap-10">
-      <Skills />
-      <ContactCTA />
-    </main>
   </div>
 </BaseLayout>
 

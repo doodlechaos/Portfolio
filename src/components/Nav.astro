@@ -1,7 +1,6 @@
 ---
 import Icon, { type Props as IconProps } from "./ui/Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
-//import {HiOutlineDocumentText} from "react-icons/hi"
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -49,7 +48,9 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
   <div id="menu-content">
     <ul class="nav-items">
       {
-        textLinks.map(({ label, href }) => (
+        textLinks
+        .filter(({href}) => href !== "/about/")
+        .map(({ label, href }) => (         
           <li>
             <a
               aria-current={Astro.url.pathname === href}

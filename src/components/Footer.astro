@@ -5,7 +5,7 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  <div class="group">
+  <!-- <div class="group">
     <p>
       Built with <Link class="link" href="https://astro.build/" external>
         Astro
@@ -13,20 +13,20 @@ const currentYear = new Date().getFullYear();
       <Icon icon="rocket-launch" size="1.2em" />
     </p>
     <p>&copy; {currentYear} Mark Robbins</p>
-  </div>
+  </div> -->
   <p class="socials">
-    <Link class="link" href="https://github.com/stekatag" external>Github</Link>
-    <Link class="link" href="https://codingly.netlify.app/" external>Blog</Link>
-    <Link class="link" href="https://sgogov.com/" external>
+    <Link class="link" href="https://www.youtube.com/user/doodlechaos" external>Youtube</Link>
+    <Link class="link" href="https://www.tiktok.com/@doodlechaos" external>Tiktok</Link>
+    <Link class="link" href="https://discord.com/invite/7FCrWAzDY7" external>Discord</Link>
+    <Link class="link" href="https://www.twitch.tv/doodlechaos" external>Twitch</Link>
+    <Link class="link" href="https://www.patreon.com/doodlechaos" external>Patreon</Link>
+    <Link class="link" href="https://x.com/DoodleChaos" external>X</Link>
+    <Link class="link" href="https://github.com/doodlechaos" external>Github</Link>
+    
+    <!-- <Link class="link" href="https://codingly.netlify.app/" external>Blog</Link> -->
+    <!-- <Link class="link" href="https://sgogov.com/" external>
       Photography Portfolio
-    </Link>
-    <Link
-      class="link"
-      href="https://www.linkedin.com/in/stefan-gogov/"
-      external
-    >
-      LinkedIn
-    </Link>
+    </Link> -->
   </p>
 </footer>
 <style>
@@ -37,6 +37,7 @@ const currentYear = new Date().getFullYear();
     margin-top: auto;
     padding: 3rem 2rem 3rem;
     text-align: center;
+    justify-content: center;
     color: var(--gray-400);
     font-size: var(--text-sm);
 
@@ -53,6 +54,7 @@ const currentYear = new Date().getFullYear();
 
   .socials {
     display: flex;
+    text-align: center;
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
@@ -62,8 +64,9 @@ const currentYear = new Date().getFullYear();
   @media (min-width: 50em) {
     footer {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
       padding: 2.5rem 5rem;
+      
     }
 
     .group {
