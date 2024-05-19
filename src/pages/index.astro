@@ -95,19 +95,19 @@ import BrandGrid from "../components/BrandGrid.astro";
       }
 
       .overlay {
-        background-color: #d56bfbc2;
+        background-color: #ded600bb;
         position: absolute;
         width: 100%;
         top: 0px;
         bottom: 6px;
         z-index: 2;
         border-radius: 2.5rem;
-        opacity: 0.8;
+        opacity: 0;
         mix-blend-mode: multiply;
         transition: opacity 350ms linear 0s;
 
         &:hover {
-          opacity: 0;
+          opacity: 0.8;
           & + img {
             filter: saturate(120%) grayscale(20%);
           }
