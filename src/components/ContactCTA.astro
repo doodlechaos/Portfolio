@@ -1,6 +1,6 @@
 ---
 import CallToAction from "./CallToAction.astro";
-import Icon, { Props as IconProps } from "./ui/Icon.astro";
+import Icon, { type Props as IconProps } from "./ui/Icon.astro";
 
 const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
   {
@@ -28,18 +28,17 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 
 <aside>
   <div class="contact-info stack gap-4">
-    <h2 class="contact-info__heading">Want to get in touch?</h2>
-    <p class="contact-info__description">
-      Find me across various social media platforms. Feel free to reach out
-      through any of these channels. Let's chat and bring your ideas to life!
-    </p>
+    <h2 class="contact-info__heading">Get in touch!</h2>
+    <h5 class="contact-info__description">
+      Need a custom or sponsered video for your brand? I'm happy to help! You can reach me at merobbins5@gmail.com and I'll get back to you ASAP. 
+    </h5>
   </div>
   <div>
-    <CallToAction href="mailto:stefangogov@proton.me">
-      Send a message
+    <CallToAction href="mailto:merobbins5@gmail.com">
+      merobbins5@gmail.com
       <Icon icon="message" size="1.2em" />
     </CallToAction>
-    <span>OR</span>
+    <!-- <span>OR</span>
     <div class="socials">
       {
         iconLinks.map(({ href, icon, label }) => (
@@ -48,7 +47,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
           </a>
         ))
       }
-    </div>
+    </div> -->
   </div>
 </aside>
 

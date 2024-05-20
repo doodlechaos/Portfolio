@@ -93,7 +93,7 @@ const { title, description } = Astro.props;
       .backgrounds {
         min-height: 100%;
         isolation: isolate;
-        background:
+        background: 
 					/*noise*/ url("/assets/backgrounds/noise.png") top
             center/220px repeat,
           /*footer*/ var(--bg-image-footer) bottom
@@ -106,6 +106,7 @@ const { title, description } = Astro.props;
         background-blend-mode: /*noise*/ overlay,
           /*footer*/ var(--bg-blend-mode), /*header1*/ var(--bg-svg-blend-mode),
           /*header2*/ normal, /*base*/ normal;
+
       }
       @media (forced-colors: active) {
         /* Deactivate custom backgrounds for high contrast users. */
