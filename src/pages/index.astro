@@ -7,6 +7,34 @@ import Hero from "../components/Hero.astro";
 import Icon from "../components/ui/Icon.astro";
 import Link from "../components/ui/link.astro";
 import BrandGrid from "../components/BrandGrid.astro";
+
+const digitalBrands = [
+  { name: 'Brand 1', logo: '/assets/logos/hermes.png' },
+  { name: 'Brand 2', logo: '/assets/logos/disney.png' },
+  { name: 'Brand 3', logo: '/assets/logos/bmw.png' },
+  { name: 'Brand 4', logo: '/assets/logos/zedd.png' },
+  { name: 'Brand 5', logo: '/assets/logos/ted.png' },
+  { name: 'Brand 6', logo: '/assets/logos/vsq.png' },
+  { name: 'Brand 7', logo: '/assets/logos/thepianoguys.png' },
+  { name: 'Brand 8', logo: '/assets/logos/cleanbandit.png' },
+  //{ name: 'Brand 9', logo: '/assets/logos/grinderfilms.png' },
+  // Add more brands as needed 
+]
+
+const liveActionBrands = [
+  { name: 'Brand 1', logo: '/assets/logos/liveAction/netflix.png' },
+  { name: 'Brand 1', logo: '/assets/logos/liveAction/foxsports.png' },
+  { name: 'Brand 1', logo: '/assets/logos/liveAction/grinderfilms.png' },
+  { name: 'Brand 1', logo: '/assets/logos/liveAction/pizzahut.png' },
+  { name: 'Brand 1', logo: '/assets/logos/liveAction/pokemon.png' },
+  { name: 'Brand 1', logo: '/assets/logos/liveAction/somersby.png' },
+  { name: 'Brand 1', logo: '/assets/logos/liveAction/bleacherreport.png' },
+  { name: 'Brand 1', logo: '/assets/logos/liveAction/moveforhunger.png' },
+
+  //{ name: 'Brand 9', logo: '/assets/logos/grinderfilms.png' },
+  // Add more brands as needed 
+]
+
 ---
 
 <BaseLayout>
@@ -22,12 +50,6 @@ import BrandGrid from "../components/BrandGrid.astro";
             <Link href="/contact" style="rounded">
               <Icon icon="readCV" size="1.33em" /> Business Inquiries
             </Link>
-            <!-- <Link href="/about" style="roundedInverted">
-              <Icon icon="handwave" size="1.33em" /> About me
-            </Link>
-            <Link href="/projects" style="roundedInverted">
-              <Icon icon="code" size="1.33em" /> Projects
-            </Link> -->
           </div>
         </Hero>
         <div class="avatar-wrapper">
@@ -40,9 +62,8 @@ import BrandGrid from "../components/BrandGrid.astro";
           />
         </div>
       </header>
-        <BrandGrid />
-
-
+        <BrandGrid myTitle="Digital" brands={digitalBrands}/>
+        <BrandGrid myTitle="Live Action" brands={liveActionBrands}/>
 
     </div>
 
@@ -50,6 +71,7 @@ import BrandGrid from "../components/BrandGrid.astro";
 </BaseLayout>
 
 <style lang="scss">
+
   .hero {
     display: flex;
     flex-direction: column;

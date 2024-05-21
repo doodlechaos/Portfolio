@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Portfolio Home | Mark Robbins" description="My portfolio projects">
+<h3 class="myCenterText">Under construction. (Coming Soon)</h3>
+  <div class="stack gap-20">
+    <div class="image-grid-wrapper">
+      <div class="image-grid">
+        <a href="/portfolio/aiart" class="image-container">
+          <img src="/assets/doodlechaos-logo.jpg" alt="Project 1" />
+        </a>
+        <a href="/portfolio/chainreactionart" class="image-container">
+          <img src="/assets/doodlechaos-logo.jpg" alt="Project 2" />
+        </a>
+        <a href="/portfolio/gamedev" class="image-container">
+          <img src="/assets/doodlechaos-logo.jpg" alt="Project 3" />
+        </a>
+        <a href="/portfolio/dreamvisualizer" class="image-container">
+          <img src="/assets/doodlechaos-logo.jpg" alt="Project 4" />
+        </a>
+      </div>
+    </div>
+</BaseLayout>
+
+<style lang="scss">
+  .myCenterText {
+    text-align: center;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 2.5rem;
+    gap: 1.5rem;
+
+    img {
+      width: 100%;
+      max-width: 22rem;
+    }
+  }
+
+  .repos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .link {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 50em) {
+    .hero {
+      flex-direction: row;
+      gap: 6rem;
+    }
+
+    .repos {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    .links {
+      margin-top: 0.5rem;
+      flex-direction: row;
+      justify-content: center;
+      gap: 0.8rem;
+
+      .link {
+        width: auto;
+      }
+    }
+  }
+
+  .image-grid-wrapper {
+    display: flex;
+    justify-content: center; /* Center the grid horizontally */
+    padding: 20px;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Center the grid horizontally */
+
+  }
+
+  .image-container { 
+    display: block;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    width: 360px;
+    height:360px;
+    justify-self: center; /* Center each image container within the grid */
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .image-container:hover {
+    transform: scale(1.1);
+  }
+
+  .image-container:hover img {
+    transform: scale(1.1);
+  }
+</style>
